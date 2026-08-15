@@ -91,6 +91,9 @@ public class Maquina {
 		this.precioPorMl = precioPorMl;
 	}
 	
+	public double getCapacidadMaxima() {
+		return capacidadMaxima;
+	}
 	public void setCapacidadMaxima(double capacidadMaxima) {
 		this.capacidadMaxima = capacidadMaxima;
 	}
