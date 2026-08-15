@@ -12,10 +12,10 @@ public class TestRecargarJUnit {
 	public void testRecargaExitosa() {
 		Maquina rubia= new Maquina ("123","Pilsener","cerveza", 0.02, 8000);
 		
-		boolean resultado = rubia.recargarCerveza(3000);
+		boolean resultado = rubia.recargarCerveza(7800);
 		
 		assertTrue(resultado);
-		assertEquals(3000, rubia.getCantidadActual(), 0.0001);
+		assertEquals(7800, rubia.getCantidadActual(), 0.0001);
 		
 	}
 	
