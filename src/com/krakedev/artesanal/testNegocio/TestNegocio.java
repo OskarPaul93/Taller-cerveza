@@ -7,7 +7,8 @@ public class TestNegocio {
 
 	public static void main(String[] args) {
 		
-		Negocio n1= new Negocio ();
+		Maquina nueva = new Maquina ("123","Club", "fria", 0.02, 8000);
+		Negocio n1= new Negocio ("Mi Negocio",nueva);
 		
 		
 		System.out.println("Nombre: " + n1.getNombre());
