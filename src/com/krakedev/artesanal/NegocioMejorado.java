@@ -18,6 +18,20 @@ public class NegocioMejorado {
 	
 	
 	
+	public ArrayList<Cliente> getClientes() {
+		return clientes;
+	}
+
+
+
+
+	public void setClientes(ArrayList<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+
+
+
+
 	public NegocioMejorado () {
 		maquinas = new ArrayList<Maquina>();
 	}

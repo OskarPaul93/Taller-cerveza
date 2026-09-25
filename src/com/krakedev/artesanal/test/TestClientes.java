@@ -9,7 +9,9 @@ public class TestClientes {
 		NegocioMejorado negocio = new NegocioMejorado();
 
         negocio.registrarCliente("Oscar", "1234567890");
-
+        
+        System.out.println("Cantidad de clientes: " + negocio.getClientes().size());
+        
 	}
 
 }
