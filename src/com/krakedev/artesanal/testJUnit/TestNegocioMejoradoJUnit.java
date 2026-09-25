@@ -64,6 +64,41 @@ public class TestNegocioMejoradoJUnit {
 		assertEquals(true, resultado);
 	}
 	
+	@Test
+	public void probarConsultarValorVendido() {
+
+	    // Crear el negocio
+	    NegocioMejorado negocio = new NegocioMejorado();
+
+	    // Registrar dos clientes
+	    negocio.registrarCliente("Oscar", "1234567890");
+	    negocio.registrarCliente("Juan", "0987654321");
+
+	    // Registrar una máquina
+	    negocio.agregarMaquina("Pilsener", "Cerveza rubia", 0.05);
+
+	    // Obtener la máquina
+	    Maquina maquina = negocio.getMaquinas().get(0);
+
+	    // Cargar la máquina
+	    maquina.llenarMaquina();
+
+	    // Obtener el código de la máquina
+	    String codigoMaquina = maquina.getCodigo();
+
+	    // Cliente 100 consume 100 ml = $5
+	    negocio.consumirCerveza(100, codigoMaquina, 100);
+
+	    // Cliente 101 consume 200 ml = $10
+	    negocio.consumirCerveza(101, codigoMaquina, 200);
+
+	    // Consultar el total vendido
+	    double totalVendido = negocio.consultarValorVendido();
+
+	    // Comprobar que se acumularon los dos consumos
+	    assertEquals(15.0, totalVendido, 0.0001);
+	}
+	
 
 
 
