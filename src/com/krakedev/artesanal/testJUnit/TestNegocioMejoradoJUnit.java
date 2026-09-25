@@ -52,6 +52,18 @@ public class TestNegocioMejoradoJUnit {
 		assertEquals(null, maquina);
 	}
 	
+	//Prueba de maquina agregada
+	
+	@Test
+	public void probarAgregarMaquinaCorrectamente() {
+
+		NegocioMejorado negocio = new NegocioMejorado();
+
+		boolean resultado = negocio.agregarMaquina("Pilsener", "Cerveza rubia", 0.05);
+
+		assertEquals(true, resultado);
+	}
+	
 
 
 
