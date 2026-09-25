@@ -122,6 +122,15 @@ public class NegocioMejorado {
 
 	    // Invocar servirCerveza y guardar su retorno
 	    double valor = maquina.servirCerveza(cantidad);
+	    
+	    registrarConsumo (cliente, valor);
+	}
+	
+	
+	public void registrarConsumo(Cliente cliente, double valor) {
+
+	    // Sumar el nuevo consumo al total acumulado
+	    cliente.setTotalConsumido(cliente.getTotalConsumido() + valor);
 	}
 
 }
