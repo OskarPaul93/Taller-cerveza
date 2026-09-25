@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class NegocioMejorado {
 	
 	public ArrayList<Maquina> maquinas;
-	private ArrayList<Cliente> clientes;
+	private ArrayList<Cliente> clientes = new ArrayList<>();
 	private int ultimoCodigo =100;
 	
 	public void registrarCliente (String nombre, String cedula) {
