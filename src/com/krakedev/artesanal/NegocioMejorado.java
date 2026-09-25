@@ -111,5 +111,17 @@ public class NegocioMejorado {
 	    return null;
 	}
 	
+	
+	public void consumirCerveza(int codigoCliente, String codigoMaquina, double cantidad) {
+
+	    // Buscar la máquina
+	    Maquina maquina = recuperarMaquina(codigoMaquina);
+
+	    // Buscar el cliente
+	    Cliente cliente = buscarClientePorCodigo(codigoCliente);
+
+	    // Invocar servirCerveza y guardar su retorno
+	    double valor = maquina.servirCerveza(cantidad);
+	}
 
 }
