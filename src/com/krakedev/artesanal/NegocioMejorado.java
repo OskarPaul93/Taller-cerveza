@@ -5,6 +5,18 @@ import java.util.ArrayList;
 public class NegocioMejorado {
 	
 	public ArrayList<Maquina> maquinas;
+	private ArrayList<Cliente> clientes;
+	private int ultimoCodigo =100;
+	
+	public void registrarCliente (String nombre, String cedula) {
+		Cliente cliente = new Cliente (nombre, cedula);
+		cliente.setCodigo(ultimoCodigo);
+	    ultimoCodigo++;
+	    clientes.add(cliente);
+	}
+	
+	
+	
 	
 	public NegocioMejorado () {
 		maquinas = new ArrayList<Maquina>();
